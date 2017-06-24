@@ -1,6 +1,8 @@
 /*Este metodo determina si la lista esta vacia 
-@param *lista apunta a null o al componente numeroElementos se inicializa es igual a cero. significa que esta vacio.
+
+@param *lista apunta a null o el componente numeroElementos de la lista es igual a cero. significa que esta vacio.
 @return un entero 1 si la lista esta vacia o 0 en caso contrario     
+
 @author whugo43                    */ 
 
 int Lista_Vacia(ListaEnlazada *lista){
