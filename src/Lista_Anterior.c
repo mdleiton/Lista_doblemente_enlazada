@@ -9,8 +9,16 @@
 ElementoLista *Lista_Anterior(ListaEnlazada *lista, ElementoLista *elemento){
 	if(lista==NULL || elemento==NULL)
 		return NULL;
-	if(elemento==  Lista_Primero(lista)){
-    		return NULL;
+	if(elemento== Lista_Primero(lista)){
+		return NULL; }
+	else{
+		ElementoLista *insertprev= &(lista->ancla);
+		while((insertprev->siguiente )!=&(lista->ancla)){
+			if(insertprev->siguiente == elemento){
+				return elemento->anterior;
+			}
+			insertprev = insertprev->siguiente;
+		}
 	}
-	return elemento->anterior;
+	return NULL;
 }
