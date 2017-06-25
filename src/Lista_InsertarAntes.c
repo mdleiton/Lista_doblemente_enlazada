@@ -4,6 +4,8 @@
 @param *elemento es un puntero a una estructura ElementoLista . antes de este elemento se inserta el nuevo
 @return un entero 1 si se realizo con exito la operacion o 0 en caso contrario 
 @author mdleiton                                     */ 
+
+#include "miLista.h"
 int Lista_InsertarAntes(ListaEnlazada *lista, void *objeto, ElementoLista *elemento){
 	if(lista==NULL || elemento==NULL) //valida que los parametros sean diferentes de nulo
 		return 0;

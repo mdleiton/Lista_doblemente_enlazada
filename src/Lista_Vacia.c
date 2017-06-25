@@ -5,6 +5,7 @@
 
 @author whugo43                    */ 
 
+#include "miLista.h"
 int Lista_Vacia(ListaEnlazada *lista){
 	if(lista==NULL ){ 
 		return 1;

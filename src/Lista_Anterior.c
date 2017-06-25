@@ -5,7 +5,7 @@
 
 @author whugo43                    */ 
 
-
+#include "miLista.h"
 ElementoLista *Lista_Anterior(ListaEnlazada *lista, ElementoLista *elemento){
 	if(lista==NULL || elemento==NULL)
 		return NULL;

@@ -3,6 +3,9 @@
 @param *objeto es un puntero a un objeto que se desea almacenar en la estructura ListaEnlazada 
 @return *elementoLista  un elemento lista que contiene igual objeto que el parametro.
 @author mdleiton   */
+
+
+#include "miLista.h"
 ElementoLista *Lista_Buscar(ListaEnlazada *lista, void *objeto){
 	if(lista==NULL) 
 		return NULL;

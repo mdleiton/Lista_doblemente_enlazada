@@ -4,6 +4,9 @@
 @return un entero null si la lista esta vacia o caso contrario el componente anterior de la ancla retornara el elemento anterior de la lista.     
 
 @author whugo43   */
+
+
+#include "miLista.h"
 ElementoLista *Lista_Ultimo(ListaEnlazada *lista){
 	if(lista==NULL){
 		return NULL;

@@ -4,6 +4,9 @@
 el componente numeroElementos se inicializa a cero.
 @return un entero 1 si se realizo con exito la operacion o 0 en caso contrario     
 @author jhonnyzp                    */ 
+
+
+#include "miLista.h"
 int Lista_Inicializar( ListaEnlazada *lista){
 	if(lista!=NULL){
 		lista->ancla.siguiente=&(lista->ancla);

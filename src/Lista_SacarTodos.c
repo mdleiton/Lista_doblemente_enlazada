@@ -6,6 +6,8 @@ Si la lista no esta vacia diferente de null.
 
 @author whugo43                    */ 
 
+
+#include "miLista.h"
 void Lista_SacarTodos(ListaEnlazada *lista){
 	if(lista!=NULL){
 		lista->ancla.siguiente=&(lista->ancla);

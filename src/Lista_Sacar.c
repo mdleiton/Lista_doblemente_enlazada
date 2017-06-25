@@ -2,6 +2,9 @@
 @param *lista es un puntero a la lista la cual deseamos sacar/eliminar un elemento
 @param *elemento es un puntero a una estructura ElementoLista que se desea almacenar en la estructura ListaEnlazada
 @author mdleiton2                                      */ 
+
+
+#include "miLista.h"
 void Lista_Sacar(ListaEnlazada *lista, ElementoLista *elemento){
 	if(lista==NULL || elemento==NULL)
 		return;

@@ -4,6 +4,9 @@
 @param *objeto es un puntero al objeto que se desea almacenar en la estructura ListaEnlazada 
 @return un entero 1 si se realizo con exito la operacion o 0 en caso contrario 
 @author mdleiton                                     */ 
+
+
+#include "miLista.h"
 int Lista_InsertarDespues(ListaEnlazada *lista, void *objeto, ElementoLista *elemento){
 	if(lista==NULL || elemento==NULL) //validar si los parametros son nulos
 		return 0;

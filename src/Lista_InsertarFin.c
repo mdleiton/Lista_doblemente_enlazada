@@ -3,6 +3,8 @@
 @param *objeto es un puntero al objeto que se desea almacenar en la estructura ListaEnlazada 
 @return un entero 1 si se realizo con exito la operacion o 0 en caso contrario 
 @author mdleiton1                                      */ 
+
+#include "miLista.h"
 int Lista_InsertarFin(ListaEnlazada *lista, void *objeto){
 	if(lista==NULL)
 		return 0;

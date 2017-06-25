@@ -4,6 +4,9 @@
 @return un entero 0 si la lista esta vacia o caso contrario el componente numeroElementos de la lista retornara el nunero de elementos de la lista.     
 
 @author whugo43                    */ 
+
+
+#include "miLista.h"
 int Lista_Conteo(ListaEnlazada *lista){
 	if(lista==NULL ){
 		return 0;
