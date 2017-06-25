@@ -1,4 +1,6 @@
-
+#include "miLista.h"
+#include <stdlib.h>
+#include<stdio.h>
 /*Este metodo saca todos los elementos de la estructura ListaEnlazada
 
 Si la lista no esta vacia diferente de null. 
@@ -6,8 +8,6 @@ Si la lista no esta vacia diferente de null.
 
 @author whugo43                    */ 
 
-
-#include "miLista.h"
 void Lista_SacarTodos(ListaEnlazada *lista){
 	if(lista!=NULL){
 		lista->ancla.siguiente=&(lista->ancla);

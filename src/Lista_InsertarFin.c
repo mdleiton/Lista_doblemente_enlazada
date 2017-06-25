@@ -1,10 +1,12 @@
+#include "miLista.h"
+#include <stdlib.h>
+#include<stdio.h>
 /*Este metodo permite insertar un elemento a la estructura lista
 @param *lista es un puntero a la lista la cual deseamos ingresar un nuevo elemento
 @param *objeto es un puntero al objeto que se desea almacenar en la estructura ListaEnlazada 
 @return un entero 1 si se realizo con exito la operacion o 0 en caso contrario 
 @author mdleiton1                                      */ 
 
-#include "miLista.h"
 int Lista_InsertarFin(ListaEnlazada *lista, void *objeto){
 	if(lista==NULL)
 		return 0;

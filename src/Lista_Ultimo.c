@@ -1,3 +1,6 @@
+#include "miLista.h"
+#include <stdlib.h>
+#include<stdio.h>
 /*Este metodo determina el elemento anterior de la lista 
 
 @param *lista apunta a null  significa que esta vacio,  
@@ -5,8 +8,6 @@
 
 @author whugo43   */
 
-
-#include "miLista.h"
 ElementoLista *Lista_Ultimo(ListaEnlazada *lista){
 	if(lista==NULL){
 		return NULL;

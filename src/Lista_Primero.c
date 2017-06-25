@@ -1,6 +1,6 @@
-
-
 #include "miLista.h"
+#include <stdlib.h>
+#include<stdio.h>
 ElementoLista *Lista_Primero(ListaEnlazada *lista){
 	if(lista==NULL ){
 		return NULL;

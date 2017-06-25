@@ -1,6 +1,6 @@
-
-
 #include "miLista.h"
+#include <stdlib.h>
+#include<stdio.h>
 int Lista_InsertarInicio(ListaEnlazada *lista, void *objeto){
 	if(lista==NULL)
 		return 0;

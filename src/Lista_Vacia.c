@@ -1,3 +1,6 @@
+#include "miLista.h"
+#include <stdlib.h>
+#include<stdio.h>
 /*Este metodo determina si la lista esta vacia 
 
 @param *lista apunta a null o el componente numeroElementos de la lista es igual a cero. significa que esta vacio.
@@ -5,7 +8,6 @@
 
 @author whugo43                    */ 
 
-#include "miLista.h"
 int Lista_Vacia(ListaEnlazada *lista){
 	if(lista==NULL ){ 
 		return 1;
