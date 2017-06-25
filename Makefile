@@ -1,7 +1,7 @@
 INCLUDE=-Iinclude/
 LIBS=-Llib/
-programa: pruebaLista objetos libmilista
-	gcc -Wall  $(LIBS) $(INCLUDE) obj/pruebaLista.o lib/libmilista.so -o bin/prueba
+programa: objetos pruebaLista libmilista
+	gcc -Wall  $(LIBS) $(INCLUDE) obj/pruebaLista.o -lmilista -o bin/prueba
 
 pruebaLista: src/pruebaLista.c
 	gcc -Wall -c $(INCLUDE) src/pruebaLista.c -o obj/pruebaLista.o
