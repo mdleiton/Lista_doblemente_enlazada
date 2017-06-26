@@ -9,23 +9,24 @@
 
 int Lista_InsertarFin(ListaEnlazada *lista, void *objeto){
 	if(lista==NULL)
-		return 0;
+		return -1;
 	ElementoLista *nuevo=NULL;
 	if ((nuevo = (ElementoLista *)malloc (sizeof(ElementoLista))) == NULL)
-    	return 0;
+    	return -1;
+    nuevo->objeto=objeto;
     if((lista->numeroElementos) == 0){ //si la lista esta vacia debemos insertar al inicio . despues de ancla
-		nuevo->siguiente=&(lista->ancla);
+		nuevo->siguiente= &(lista->ancla);
 		nuevo->anterior = &(lista->ancla);
 		(lista->ancla).siguiente=nuevo;
 		(lista->ancla).anterior=nuevo;
     }else{ //agregamos el elemento al final de la lista
-    	ElementoLista *inicio=lista->ancla.anterior;
-		nuevo->siguiente=&(lista->ancla);
-		nuevo->anterior = inicio;
-		inicio->siguiente=nuevo;
-		(lista->ancla).anterior=nuevo;
+    	ElementoLista *ultimo=Lista_Ultimo(lista);
+    	ultimo->siguiente=nuevo;
+    	nuevo->anterior = ultimo;
+    	nuevo->siguiente = &(lista->ancla);
+		lista->ancla.anterior=nuevo;
     }
-    nuevo->objeto=objeto;
+    
     lista->numeroElementos += 1;
   return 1;
 }

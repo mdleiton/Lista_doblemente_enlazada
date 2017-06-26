@@ -1,16 +1,26 @@
 INCLUDE=-Iinclude/
 LIBS=-Llib/
-programa: objetos pruebaLista libmilista
+programa: implementaciones pruebaLista libmilista
 	gcc -Wall  $(LIBS) $(INCLUDE) obj/pruebaLista.o -lmilista -o bin/prueba
 
 pruebaLista: src/pruebaLista.c
 	gcc -Wall -c $(INCLUDE) src/pruebaLista.c -o obj/pruebaLista.o
 
-objetos: implementaciones  # se hace esto ya que no se pueden generar y direccionar  varios archivos a vez
-	mv -f *.o obj/
-
 implementaciones: 
-	gcc -Wall -shared -fPIC -c $(INCLUDE) src/Lista*.c #se crearan en directorio actual del makefile luego se los debe mover al /obj
+	gcc -Wall -c $(INCLUDE) src/Lista_Inicializar.c -o obj/Lista_Inicializar.o
+	gcc -Wall -c $(INCLUDE) src/Lista_Vacia.c -o obj/Lista_Vacia.o
+	gcc -Wall -c $(INCLUDE) src/Lista_Conteo.c -o obj/Lista_Conteo.o
+	gcc -Wall -c $(INCLUDE) src/Lista_Buscar.c -o obj/Lista_Buscar.o
+	gcc -Wall -c $(INCLUDE) src/Lista_InsertarFin.c -o obj/Lista_InsertarFin.o
+	gcc -Wall -c $(INCLUDE) src/Lista_InsertarInicio.c -o obj/Lista_InsertarInicio.o
+	gcc -Wall -c $(INCLUDE) src/Lista_Sacar.c -o obj/Lista_Sacar.o
+	gcc -Wall -c $(INCLUDE) src/Lista_SacarTodos.c -o obj/Lista_SacarTodos.o
+	gcc -Wall -c $(INCLUDE) src/Lista_InsertarDespues.c -o obj/Lista_InsertarDespues.o
+	gcc -Wall -c $(INCLUDE) src/Lista_InsertarAntes.c -o obj/Lista_InsertarAntes.o
+	gcc -Wall -c $(INCLUDE) src/Lista_Primero.c -o obj/Lista_Primero.o
+	gcc -Wall -c $(INCLUDE) src/Lista_Ultimo.c -o obj/Lista_Ultimo.o
+	gcc -Wall -c $(INCLUDE) src/Lista_Siguiente.c -o obj/Lista_Siguiente.o
+	gcc -Wall -c $(INCLUDE) src/Lista_Anterior.c -o obj/Lista_Anterior.o
 
 #generamos libreria dinamica
 libmilista: implementaciones

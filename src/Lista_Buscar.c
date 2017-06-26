@@ -7,18 +7,18 @@
 @return *elementoLista  un elemento lista que contiene igual objeto que el parametro.
 @author mdleiton   */
 ElementoLista *Lista_Buscar(ListaEnlazada *lista, void *objeto){
-	if(lista==NULL) 
+	if(lista==NULL ){  //validamos que lista sea diferente de null
 		return NULL;
-	ElementoLista *elem = NULL;
-
-	for (elem = Lista_Primero(lista); elem != NULL; elem = Lista_Siguiente(lista, elem)) { //recorremos todo la lista en busca del elemento lista y su respectivo objeto
-		long valorlista =(long)elem->objeto;
-		long valor=(long )objeto;
-		if(valorlista== valor)  //verificamos si los elementos en la lista son los mismo.
-			return elem;
-	} 
-	return NULL; // si llegamos a este punto es porque no se encontro dicho elemento en la lista
-
-
-
+	}else{
+		ElementoLista *iterador=Lista_Primero(lista);
+		ElementoLista *fin=Lista_Ultimo(lista);
+		while(iterador!=fin){    //VERIFICAMOS CADA ELEMENTO HASTA LLEGAR AL ULTIMO 
+			if(iterador->objeto == objeto){
+				return iterador;   // SI SON IGUALES LOS OBJETOS DEBE RETORNAL EL ELEMENTO
+			}
+			iterador=iterador->siguiente;
+		}
+		return fin; 
+		}
+	return NULL;// si llegamos a este punto es porque no se encontro dicho elemento en la lista
 }
