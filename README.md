@@ -1,5 +1,5 @@
-ArqClienteServidorWeb 
-======================
+Lista doblemente enlazada 
+=========================
 
 Escuela Superior Politécnica del Litoral
 Version 1.0 15/08/2017 
